@@ -62,7 +62,7 @@ def Polls():
     st.title('Code Foo Polls!')
     st.subheader('What is Code Foo?')
     st.write('Code Foo is an eight-week internship opportunity created by IGN to give developers real world experience where interns will be mentored by IGN software engineers!'+
-    'As part of my application to Code Foo I have designed a realtime polling webapp where users can vote for their pick in various different fields.')
+    ' As part of my application to Code Foo, I have designed a realtime polling webapp where users can vote for their pick in various different fields.')
     st.subheader('So let\'s start voting!')
     ref = db.reference("/Polls")
     query = ref.get()
