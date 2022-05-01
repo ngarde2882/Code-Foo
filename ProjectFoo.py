@@ -24,26 +24,18 @@ from PIL import Image
 # authe = firebase.auth()
 # database = firebase.database()
 
-# st.markdown(""" <style>
-# #MainMenu {visibility: hidden;}
-# footer {visibility: hidden;}
-# </style> """, unsafe_allow_html=True)
+
 
 image = Image.open("img.png")
 
 cred = credentials.Certificate("project-foo-poll-firebase-adminsdk-7du0h-61e33f73d8.json")
 try:
     st.set_page_config(page_title='Code Foo Poll', page_icon=image,layout='wide')
+    st.markdown(""" <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style> """, unsafe_allow_html=True)
     firebase_admin.initialize_app(cred, {'databaseURL':'https://project-foo-poll-default-rtdb.firebaseio.com'})
-    max_width_str = f"max-width: 1500px;"
-    st.markdown(
-        f"""
-            <style>
-                .reportview-container .main .block-container {{{max_width_str}}}
-            </style>    
-        """,
-        unsafe_allow_html=True
-    )
 except:
     pass
 
