@@ -34,11 +34,11 @@ image = Image.open("img.png")
 cred = credentials.Certificate("project-foo-poll-firebase-adminsdk-7du0h-61e33f73d8.json")
 try:
     firebase_admin.initialize_app(cred, {'databaseURL':'https://project-foo-poll-default-rtdb.firebaseio.com'})
-    st.set_page_config(page_title='Code Foo Poll', page_icon=image)
+    st.set_page_config(page_title='Code Foo Poll', page_icon=image,layout="wide")
 except:
     pass
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 # plt.style.use('bmh')
 plt.style.use('dark_background')
